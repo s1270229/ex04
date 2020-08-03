@@ -1,7 +1,15 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Random;
 
 public class HeadsOrTails {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Who are you?");
+        System.out.print("> ");
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        String name = br.readLine();
+        System.out.println("Hello, " + name + "!");
         String[] str = {"Heads", "Tails"};
         int[] count = {0, 0};
         System.out.println("Tossing a coin...");
